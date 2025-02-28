@@ -260,11 +260,11 @@ span {
   }
   60.01%,
   80% {
-    content: "AI Engineer";
+    content: "AI/ML Engineer";
   }
   80.01%,
   100% {
-    content: "ML Engineer";
+    content: "UI/UX Designer";
   }
 }
 
@@ -626,21 +626,30 @@ span {
       font-size: 45%;
   }
 
-  .skill .row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem; /* Menambah jarak antar card */
-  }
-
   .skill .col-md-3 {
       flex: 0 0 50%; /* Setiap card menjadi 50% lebar pada layar kecil */
-      max-width: 50%;
+      max-width: 100%;
       margin-bottom: 1rem; /* Memberikan jarak antar card */
+  } 
+
+  .skill .container-skill {
+    display: flex;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));; /* Dua kolom dengan ukuran minimal */
+    gap: 1rem; /* Kurangi jarak antar elemen */
+    justify-content: center;
+    align-items: center;
   }
 
   .skill .card {
-      width: 100%; /* Pastikan card mengisi lebar container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 120px; /* Sesuaikan ukuran kartu */
+    margin: auto; /* Biar tetap rapi */
   }
 
   /* Membuat card lebih besar untuk ukuran layar kecil */
